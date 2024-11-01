@@ -45,6 +45,7 @@ declare -A langs=(
     [typescript]='npm'
     [lisp]='sbcl'
     [racket]='racket'
+    [csharp]='dotnet8-sdk'
 )
 
 HEADER="FROM docker.io/alpine:latest"
