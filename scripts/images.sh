@@ -37,13 +37,13 @@ declare -A langs=(
     [go]='gcc-go'
     [haskell]='ghc'
     [java]='openjdk21'
-    [lue]='lua'
+    [lua]='lua'
     [perl]='perl'
     [python]='python3'
     [ruby]='ruby'
     [rust]='rust'
     [typescript]='npm'
-    [list]='sbcl'
+    [lisp]='sbcl'
     [racket]='racket'
     [csharp]='dotnet8-sdk'
 )
@@ -66,7 +66,7 @@ for lang in "${!langs[@]}"; do
     fi
     langs["$lang"]=$(echo -e "${header}\n${prefix}${langs[$lang]} && ${suffix}")
     echo "${langs[$lang]}" > TEMP_CONTAINERFILE
-    podman build -t whipcode-${lang,,} -f TEMP_CONTAINERFILE . | while read line; do echo "[$i/17] [${lang,,}] $line"; done
+    podman build -t whipcode-${lang,,} -f TEMP_CONTAINERFILE . | while read line; do echo "[$i/${#langs[@]}] [${lang,,}] $line"; done
 done
 
 rm -f TEMP_CONTAINERFILE

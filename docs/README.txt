@@ -54,7 +54,7 @@ Environment setup:
         Ensure that `sudo getenforce` returns `Enforcing`.
 
         $ sudo dnf install container-selinux
-        $ sudo semodule -i selinux/*.cil
+        $ sudo semodule -i selinux/whipcode.cil selinux/base_container.cil
 
 
 Build:
