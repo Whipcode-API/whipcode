@@ -66,7 +66,7 @@ for lang in "${!langs[@]}"; do
     fi
     langs["$lang"]=$(echo -e "${header}\n${prefix}${langs[$lang]} && ${suffix}")
     echo "${langs[$lang]}" > TEMP_CONTAINERFILE
-    podman build -t whipcode-${lang,,} -f TEMP_CONTAINERFILE . | while read line; do echo "[$i/16] [${lang,,}] $line"; done
+    podman build -t whipcode-${lang,,} -f TEMP_CONTAINERFILE . | while read line; do echo "[$i/17] [${lang,,}] $line"; done
 done
 
 rm -f TEMP_CONTAINERFILE
