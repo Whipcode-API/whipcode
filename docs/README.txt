@@ -24,6 +24,7 @@ Supported languages:
     TypeScript            14
     Common Lisp           15
     Racket                16
+    C#                    17
 
 
 Please set this up on a SELinux-enabled system.
