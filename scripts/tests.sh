@@ -40,6 +40,7 @@ declare -A langs=(
     [19]='section        .text         \nglobal         _start          \n_start:\n    mov edx, len \n    mov ecx, msg \n    mov ebx, 1\n    mov eax, 4\n    int 0x80\n    mov eax, 1\n    int 0x80\nsection        .data             \n    msg        db "Success!", 0xa\n    len        equ $ -msg\n'
     [20]='const std = @import("std");pub fn main() !void { std.io.getStdOut().writeAll("Success!") catch unreachable; }'
     [21]='echo "Success!"'
+    [22]='import std.stdio; void main() { writeln("Success!"); }'
 )
 
 for i in "${!langs[@]}"; do

@@ -67,6 +67,7 @@ func getLanguageConfig() map[string]map[string]string {
 		"19": {"entry": "nasm", "ext": "asm", "image": "whipcode-nasm"},
 		"20": {"entry": "zig", "ext": "zig", "image": "whipcode-zig"},
 		"21": {"entry": "nim", "ext": "nim", "image": "whipcode-nim"},
+		"22": {"entry": "d", "ext": "d", "image": "whipcode-d"},
 	}
 }
 

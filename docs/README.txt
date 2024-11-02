@@ -29,6 +29,7 @@ Supported languages:
     x86 Assembly          19
     Zig                   20
     Nim                   21
+    D                     22
 
 
 Please set this up on a SELinux-enabled system.
