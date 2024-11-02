@@ -50,6 +50,7 @@ declare -A langs=(
     [nasm]='nasm binutils'
     [zig]='zig'
     [nim]='nim gcc'
+    [d]='gcc-gdc'
 )
 
 HEADER="FROM docker.io/alpine:latest"
